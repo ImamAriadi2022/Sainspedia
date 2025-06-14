@@ -1,0 +1,89 @@
+
+
+.game-container {
+  font-family: sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  color: #2d2d2d;
+  margin-bottom: 2rem;
+}
+
+.level-box {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ball {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e11d48;
+  margin: 2rem auto;
+  cursor: grab;
+}
+
+.blocks {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.block {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.block.light {
+  background-color: #38bdf8;
+}
+
+.block.heavy {
+  background-color: #6366f1;
+}
+
+.kick-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.character {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.wall {
+  font-size: 2rem;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #15803d;
+}

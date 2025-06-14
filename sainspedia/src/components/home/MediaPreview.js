@@ -1,71 +1,71 @@
 import React from "react";
-import Lottie from "react-lottie-player";
-import energyAnim from "../../assets/animations/energy.json"; // Ganti dengan file animasi Lottie Anda
-
-const mediaList = [
-  {
-    type: "audio",
-    title: "Audio Narasi: Gaya & Gerak",
-    src: "/media/audio/gaya-dan-gerak.mp3",
-    desc: "Penjelasan materi gaya & gerak dengan suara narator.",
-    icon: "bi bi-mic-fill",
-    bg: "success",
-  },
-  {
-    type: "video",
-    title: "Video Eksperimen: Cahaya",
-    src: "/media/video/eksperimen-cahaya.mp4",
-    desc: "Eksperimen sederhana untuk memahami sifat cahaya.",
-    icon: "bi bi-film",
-    bg: "danger",
-  },
-];
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function MediaPreview() {
+  const navigate = useNavigate();
+
   return (
     <div className="row g-4">
-      {mediaList.map((media, idx) => (
-        <div className="col-md-4" key={idx}>
-          <div className="card h-100 shadow-sm">
-            <div className={`card-header bg-${media.bg} text-white text-center`}>
-              <i className={`${media.icon} display-6`}></i>
-              <div>{media.title}</div>
-            </div>
-            <div className="card-body text-center">
-              {media.type === "audio" && (
-                <audio controls>
-                  <source src={media.src} type="audio/mp3" />
-                  Browser Anda tidak mendukung audio.
-                </audio>
-              )}
-              {media.type === "video" && (
-                <video width="100%" height="160" controls>
-                  <source src={media.src} type="video/mp4" />
-                  Browser Anda tidak mendukung video.
-                </video>
-              )}
-              <p className="mt-2 mb-0">{media.desc}</p>
-            </div>
+      <div className="col-md-6">
+        <div className="card h-100 shadow-sm text-center">
+          {/* Thumbnail Video */}
+          <div style={{
+            background: "linear-gradient(135deg, #4f8cff 60%, #6ee7ff 100%)",
+            borderTopLeftRadius: "0.5rem",
+            borderTopRightRadius: "0.5rem",
+            padding: "24px 0"
+          }}>
+            <img
+              src="/media/images/video-thumb.png"
+              alt="Video Pembelajaran"
+              style={{ width: 100, height: 100, objectFit: "contain" }}
+            />
+          </div>
+          <div className="card-body bg-primary text-white rounded-bottom">
+            <i className="bi bi-film display-5 mb-2"></i>
+            <h5 className="card-title fw-bold">Video Pembelajaran</h5>
+            <p className="card-text">
+              Tonton video interaktif untuk memahami konsep sains dengan mudah.
+            </p>
+            <Button
+              variant="light"
+              className="fw-bold"
+              onClick={() => navigate("/videopembelajaran")}
+            >
+              Lihat Detail
+            </Button>
           </div>
         </div>
-      ))}
-      {/* Animasi Interaktif */}
-      <div className="col-md-4">
-        <div className="card h-100 shadow-sm">
-          <div className="card-header bg-info text-white text-center">
-            <i className="bi bi-stars display-6"></i>
-            <div>Animasi Interaktif: Energi</div>
-          </div>
-          <div className="card-body text-center">
-            <Lottie
-              loop
-              play
-              animationData={energyAnim}
-              style={{ width: 180, height: 180, margin: "0 auto" }}
+      </div>
+      <div className="col-md-6">
+        <div className="card h-100 shadow-sm text-center">
+          {/* Thumbnail Game/Animasi */}
+          <div style={{
+            background: "linear-gradient(135deg, #34d399 60%, #6ee7b7 100%)",
+            borderTopLeftRadius: "0.5rem",
+            borderTopRightRadius: "0.5rem",
+            padding: "24px 0"
+          }}>
+            <img
+              src="/media/images/game-thumb.png"
+              alt="Game & Animasi Interaktif"
+              style={{ width: 100, height: 100, objectFit: "contain" }}
             />
-            <p className="mt-2 mb-0">
-              Animasi interaktif untuk memahami konsep energi panas.
+          </div>
+          <div className="card-body bg-success text-white rounded-bottom">
+            <i className="bi bi-controller display-5 mb-2"></i>
+            <h5 className="card-title fw-bold">Game & Animasi Interaktif</h5>
+            <p className="card-text">
+              Belajar sambil bermain dengan animasi dan audio interaktif seperti game!
             </p>
+            <Button
+              variant="light"
+              className="fw-bold"
+              onClick={() => navigate("/gamebelajar")}
+            >
+              Lihat Detail
+            </Button>
           </div>
         </div>
       </div>
