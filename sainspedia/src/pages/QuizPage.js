@@ -168,7 +168,7 @@ function QuizPage() {
   };
 
   const handleShareWA = () => {
-    const text = `Aku baru saja mencoba Kuis Sainspedia dan mendapat skor ${score}/${questions.length}! Yuk, coba juga dan buktikan pengetahuanmu! https://sainspedia.com`;
+    const text = `Aku baru saja mencoba Kuis Sainspedia dan mendapat skor ${score}/${questions.length}! Yuk, coba juga dan buktikan pengetahuanmu! https://sainspedia.vercel.app/kuis`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
   };
 
