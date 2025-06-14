@@ -19,7 +19,7 @@ function MediaPreview() {
             <img
               src="/media/images/video-thumb.png"
               alt="Video Pembelajaran"
-              style={{ width: 100, height: 100, objectFit: "contain" }}
+              style={{ width: 500, height: 300 }}
             />
           </div>
           <div className="card-body bg-primary text-white rounded-bottom">
@@ -48,9 +48,9 @@ function MediaPreview() {
             padding: "24px 0"
           }}>
             <img
-              src="/media/images/game-thumb.png"
+              src="/media/images/gameInteraktif.png"
               alt="Game & Animasi Interaktif"
-              style={{ width: 100, height: 100, objectFit: "contain" }}
+              style={{ width: 500, height: 300 }}
             />
           </div>
           <div className="card-body bg-success text-white rounded-bottom">

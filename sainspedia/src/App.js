@@ -19,7 +19,7 @@ function App() {
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Video" element={<Video />} />
+          <Route path="/videopembelajaran" element={<Video />} />
           <Route path="/kuis" element={<QuizPage />} />
           <Route path="/gamebelajar" element={<GameBelajar />} />
           {/* Tambahkan rute lain sesuai kebutuhan */}
